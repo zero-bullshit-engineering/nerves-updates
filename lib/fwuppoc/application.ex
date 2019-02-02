@@ -39,7 +39,7 @@ defmodule Fwuppoc.Application do
     if serial == "" do
       new_serial = UUID.uuid4()
       System.cmd("fw_setenv", ["nerves_serial_number", new_serial])
-      reboot()
+      Nerves.Runtime.reboot()
     end
   end
 end
