@@ -12,6 +12,7 @@ defmodule Fwuppoc.Application do
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Fwuppoc.Supervisor]
     Supervisor.start_link(children(@target), opts)
+    :timer.apply_interval(30_000, Updater, :pull_update, [])
   end
 
   # List all child processes to be supervised
