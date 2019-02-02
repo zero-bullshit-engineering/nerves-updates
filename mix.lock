@@ -34,4 +34,5 @@
   "toolshed": {:hex, :toolshed, "0.2.3", "bc9a7ef458c4b9f144e66c8741ba081400c5fb104a092862855f7387bd5495aa", [:mix], [], "hexpm"},
   "uboot_env": {:hex, :uboot_env, "0.1.0", "176d277c8461d849614d8b82595060bf03ace6ca59d49c5b53707d90cb9e2f5a", [:mix], [], "hexpm"},
   "unicode_util_compat": {:hex, :unicode_util_compat, "0.4.1", "d869e4c68901dd9531385bb0c8c40444ebf624e60b6962d95952775cac5e90cd", [:rebar3], [], "hexpm"},
+  "uuid": {:hex, :uuid, "1.1.8", "e22fc04499de0de3ed1116b770c7737779f226ceefa0badb3592e64d5cfb4eb9", [:mix], [], "hexpm"},
 }
