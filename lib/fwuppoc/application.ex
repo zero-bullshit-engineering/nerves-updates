@@ -11,8 +11,9 @@ defmodule Fwuppoc.Application do
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Fwuppoc.Supervisor]
-    Supervisor.start_link(children(@target), opts)
+    HTTPoison.start()
     :timer.apply_interval(30_000, Updater, :pull_update, [])
+    Supervisor.start_link(children(@target), opts)
   end
 
   # List all child processes to be supervised
