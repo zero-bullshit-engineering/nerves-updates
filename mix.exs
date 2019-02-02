@@ -42,6 +42,7 @@ defmodule Fwuppoc.MixProject do
       {:toolshed, "~> 0.2"},
       {:httpoison, "~> 1.4"},
       {:nerves_firmware, "~> 0.4.0"},
+      {:uuid, "~> 1.1},
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.6", targets: @all_targets, override: true},
 
