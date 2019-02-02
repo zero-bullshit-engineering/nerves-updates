@@ -20,7 +20,7 @@ defmodule Updater do
       status: status
     }
 
-    HTTPoison.post("http://" <> @ip <> "/report", Jason.encode(data), [
+    HTTPoison.post("http://" <> @ip <> "/report", Jason.encode!(data), [
       {"Content-Type", "application/json"}
     ])
   end
