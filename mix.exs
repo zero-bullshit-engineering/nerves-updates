@@ -41,6 +41,7 @@ defmodule Fwuppoc.MixProject do
       {:ring_logger, "~> 0.6"},
       {:toolshed, "~> 0.2"},
       {:httpoison, "~> 1.4"},
+      {:jason, "~> 1.1.2"},
       {:nerves_firmware, "~> 0.4.0"},
       {:uuid, "~> 1.1},
       # Dependencies for all targets except :host

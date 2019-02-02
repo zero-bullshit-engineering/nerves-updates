@@ -23,7 +23,7 @@ defmodule Updater do
       serial: serial
     }
 
-    HTTPoison.post("http://" <> @ip <> "/report", Jason.encode(data), [
+    HTTPoison.post("http://" <> @ip <> "/report", Jason.encode!(data), [
       {"Content-Type", "application/json"}
     ])
   end
