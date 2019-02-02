@@ -37,14 +37,15 @@ defmodule Fwuppoc.MixProject do
       # Dependencies for all targets
       {:nerves, "~> 1.4", runtime: false},
       {:shoehorn, "~> 0.4"},
+      {:nerves_init_gadget, "~> 0.6"},
       {:ring_logger, "~> 0.6"},
       {:toolshed, "~> 0.2"},
 
       # Dependencies for all targets except :host
-      {:nerves_runtime, "~> 0.6", targets: @all_targets},
+      {:nerves_runtime, "~> 0.6", targets: @all_targets, override: true},
 
       # Dependencies for specific targets
-      {:nerves_system_rpi0, "~> 1.6", runtime: false, targets: :rpi0},
+      {:nerves_system_rpi0, "~> 1.6", runtime: false, targets: :rpi0}
     ]
   end
 end
