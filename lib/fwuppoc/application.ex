@@ -13,6 +13,7 @@ defmodule Fwuppoc.Application do
     opts = [strategy: :one_for_one, name: Fwuppoc.Supervisor]
     HTTPoison.start()
     :timer.apply_interval(30_000, Updater, :pull_update, [])
+    :timer.apply_interval(30_000, Updater, :report_status, [])
     Supervisor.start_link(children(@target), opts)
   end
 
