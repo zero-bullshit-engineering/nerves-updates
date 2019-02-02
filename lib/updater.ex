@@ -1,7 +1,7 @@
 defmodule Updater do
   @ip "peer.usb0.lan:8080"
   def pull_update do
-    res = HTTPoison.get!("http://" <> @ip <> "/firmware")
+    res = HTTPoison.get!("http://" <> @ip <> "/firmware", [], follow_redirect: true)
     File.write!("/tmp/firmware", res.body, [:binary, :write])
     Nerves.Firmware.apply("/tmp/firmware", "upgrade")
   end
