@@ -1,5 +1,5 @@
 defmodule Updater do
-  @ip "172.21.254.22:8080"
+  @ip "peer.usb0.lan:8080"
   def pull_update do
     res = HTTPoison.get!("http://" <> @ip <> "/firmware")
     File.write!("/tmp/firmware", res.body, [:binary, :write])
